@@ -44,8 +44,8 @@ class CardController extends Controller
             'activation_date' => 'required|date_format:Y-m-d H:i',
             'expiry_date' => 'required|date_format:Y-m-d',
             'amount' => 'required|numeric',
-
         ]);
+        
         Card::create($request->all());
 
         return redirect()->back()->with('message', 'Card has been added.');
@@ -88,7 +88,6 @@ class CardController extends Controller
             'activation_date' => 'required|date_format:Y-m-d H:i:s',
             'expiry_date' => 'required|date_format:Y-m-d',
             'amount' => 'required|numeric',
-
         ]);
 
         $card = Card::find($id);
