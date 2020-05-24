@@ -92,7 +92,6 @@ class CardController extends Controller
         ]);
 
         $card = Card::find($id);
-
         
         $card->card_number = $request->input('card_number');
         $card->pin = $request->input('pin');
